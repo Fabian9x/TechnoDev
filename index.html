@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechnoDev | Expertos en Apps y Desarrollo Web</title>
+    <meta name="description"
+        content="TechnoDev: Agencia de desarrollo de software en Ecuador especializada en aplicaciones móviles y páginas web.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="TechnoDev Logo">
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#inicio" class="active">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="https://wa.me/593995055747?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20desarrollo."
+                        class="btn-primary-outline" target="_blank" rel="noopener noreferrer">Contactar</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content fade-in-up">
+                <div class="subtitle">Desde Ecuador para el mundo 🌎</div>
+                <h1 class="hero-title">
+                    Transformamos tus ideas en <span class="text-gradient">Realidad Digital</span>
+                </h1>
+                <p class="hero-description">
+                    Somos especialistas en desarrollo de aplicaciones móviles y soluciones web de alto impacto. Elevamos
+                    tu marca con tecnología de vanguardia y diseño premium.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#portafolio" class="btn btn-primary">Ver Proyectos <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                    <a href="https://wa.me/593995055747?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20desarrollo."
+                        class="btn btn-primary-outline" target="_blank" rel="noopener noreferrer">Hablar con un
+                        experto</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <!-- Decorative elements for the tech/premium feel -->
+                <div class="blob shape-1"></div>
+                <div class="blob shape-2"></div>
+                <div class="glass-card mockup-card floating">
+                    <div class="mockup-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="mockup-body">
+                        <div class="mockup-line w-80"></div>
+                        <div class="mockup-line w-60"></div>
+                        <div class="mockup-line w-100 mt-2"></div>
+                        <div class="mockup-line w-40"></div>
+
+                        <div class="mockup-feature">
+                            <i class="fa-solid fa-code text-gradient"></i>
+                            <span>Premium Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services section-padding">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <div class="subtitle text-gradient">Nuestra Especialidad</div>
+                <h2>Soluciones Tecnológicas a Medida</h2>
+                <p>Desarrollamos herramientas digitales que impulsan el crecimiento de tu negocio con estándares
+                    internacionales.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Mobile Apps -->
+                <div class="service-card glass-panel fade-in-up" data-delay="100">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <h3>Desarrollo Móvil</h3>
+                    <p>Aplicaciones nativas e híbridas para iOS y Android. Experiencias fluidas, diseño intuitivo y alto
+                        rendimiento que conectan con tus usuarios donde sea que estén.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check text-gradient"></i> iOS & Android</li>
+                        <li><i class="fa-solid fa-check text-gradient"></i> UI/UX Moderno</li>
+                        <li><i class="fa-solid fa-check text-gradient"></i> Integración de APIs</li>
+                    </ul>
+                </div>
+
+                <!-- Web Apps -->
+                <div class="service-card glass-panel fade-in-up" data-delay="200">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3>Desarrollo Web</h3>
+                    <p>Desde landing pages atractivas hasta plataformas web complejas y e-commerce. Sistemas rápidos,
+                        seguros y escalables diseñados para convertir.</p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-check text-gradient"></i> Diseño Responsivo</li>
+                        <li><i class="fa-solid fa-check text-gradient"></i> Sistemas a Medida</li>
+                        <li><i class="fa-solid fa-check text-gradient"></i> Optimización SEO</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portafolio" class="portfolio section-padding">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <div class="subtitle text-gradient">Nuestro Trabajo</div>
+                <h2>Casos de Éxito</h2>
+                <p>Descubre cómo hemos transformado negocios a través de soluciones web y móviles excepcionales.</p>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-card fade-in-up" data-delay="100">
+                    <div class="portfolio-img">
+                        <img src="assets/JYSCOMPUTER.png" alt="Mockup de JYSCOMPUTER Landing Page">
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">JYSCOMPUTER</span>
+                        <h3 class="portfolio-title">E-Commerce Web</h3>
+                        <p class="portfolio-desc">Plataforma web completa para tienda de computadoras con integración de
+                            pagos y seguimiento en tiempo real.</p>
+                        <a href="https://jyscomputer.com" class="portfolio-link">Ver detalles <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-card fade-in-up" data-delay="200">
+                    <div class="portfolio-img">
+                        <img src="assets/ZonaCheat.png" alt="Mockup de ZonaCheat Landing Page">
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Zona Cheat</span>
+                        <h3 class="portfolio-title">Landing Page</h3>
+                        <p class="portfolio-desc">Landing page para una página de cheats de Free Fire.</p>
+                        <a href="https://zonacheat.com" class="portfolio-link">Ver detalles <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-card fade-in-up" data-delay="300">
+                    <div class="portfolio-img">
+                        <img src="assets/CafeteriaLouisXIV.png" alt="Mockup de Cafeteria Louis XIV Landing Page">
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Cafeteria Louis XIV</span>
+                        <h3 class="portfolio-title">E-Commerce Web</h3>
+                        <p class="portfolio-desc">E-Commerce para una cafetería con menú, reservas y delivery en tiempo
+                            real.</p>
+                        <a href="https://louisxivcafeteria.com/" class="portfolio-link">Ver detalles <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-card fade-in-up" data-delay="400">
+                    <div class="portfolio-img">
+                        <img src="assets/GeekTechnology.png" alt="Mockup de Geek Technology Landing Page">
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Geek Technology</span>
+                        <h3 class="portfolio-title">E-Commerce Web</h3>
+                        <p class="portfolio-desc">E-Commerce para una tienda de venta de productos Tecnologicos y
+                            accesorios de computadoras.</p>
+                        <a href="https://geek-ec.com/" class="portfolio-link">Ver detalles <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-card fade-in-up" data-delay="500">
+                    <div class="portfolio-img">
+                        <img src="assets/FinanSys.png" alt="Mockup de FinanSys Landing Page">
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">FinanSys</span>
+                        <h3 class="portfolio-title">POS Web</h3>
+                        <p class="portfolio-desc">POS Web para punto de venta, Gestión de Inventario y facturacion
+                            electronica SRI.</p>
+                        <a href="#" class="portfolio-link">Ver detalles <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-card fade-in-up" data-delay="500">
+                    <div class="portfolio-img">
+                        <img src="assets/SaberiEc.png" alt="Mockup de Saberi Ec Landing Page">
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-category">Saberi Ec</span>
+                        <h3 class="portfolio-title">Plataforma Educativa</h3>
+                        <p class="portfolio-desc">Plataforma Educativa para cursos y capacitaciones con gestion para
+                            recursos digitales.</p>
+                        <a href="https://saberi.ec/" class="portfolio-link">Ver detalles <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="about section-padding">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image fade-in-up">
+                    <img src="assets/sobre.jpg" alt="Mockup de Saberi Ec Landing Page">
+                </div>
+
+                <div class="about-text fade-in-up" data-delay="200">
+                    <div class="subtitle text-gradient">Sobre TechnoDev</div>
+                    <h3>Innovación desde el <span class="text-gradient">corazón del mundo</span></h3>
+                    <p>Orgullosamente con sede en Ecuador, somos un equipo apasionado de desarrolladores, diseñadores y
+                        estrategas digitales. Nuestra misión es empoderar empresas globales con tecnología accesible,
+                        robusta y hermosa.</p>
+                    <p>Combinamos metodologías ágiles con las últimas tecnologías para entregar productos que no solo
+                        cumplen, sino que superan las expectativas de nuestros clientes.</p>
+
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Años de experiencia</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">12+</span>
+                            <span class="stat-label">Proyectos entregados</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contacto" class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <a href="#" class="logo">
+                        <img src="assets/logo.png" alt="TechnoDev Logo">
+                    </a>
+                    <p>Agencia de desarrollo de software en Ecuador especializada en crear experiencias digitales
+                        premium para web y móvil.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/technodev.ec/" aria-label="Instagram"><i
+                                class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#portafolio">Portafolio</a></li>
+                        <li><a href="#nosotros">Sobre Nosotros</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> Guayaquil, Ecuador</li>
+                        <li><a href="mailto:hola@technodev.ec"><i class="fa-solid fa-envelope"></i>
+                                hola@technodev.ec</a></li>
+                        <li><a href="tel:+593 99 505 5747"><i class="fa-solid fa-phone"></i> +593 99 505 5747</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 TechnoDev. Todos los derechos reservados. Diseñado en Ecuador 🇪🇨.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Social Floating Buttons -->
+    <a href="https://www.instagram.com/technodev.ec/" class="instagram-float" target="_blank" rel="noopener noreferrer"
+        aria-label="Visit on Instagram">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://wa.me/593995055747" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JS principal -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
