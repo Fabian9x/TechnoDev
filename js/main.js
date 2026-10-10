@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     // Mobile Menu Toggle
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
@@ -49,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 window.scrollTo({
                     top: offsetPosition,
-                    behavior: 'smooth'
+                    behavior: prefersReducedMotion ? 'auto' : 'smooth'
                 });
             }
         });
@@ -62,23 +64,70 @@ document.addEventListener('DOMContentLoaded', () => {
         threshold: 0.15
     };
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Add small delay if data-delay exists
-                const delay = entry.target.getAttribute('data-delay');
-                if (delay) {
-                    setTimeout(() => {
-                        entry.target.classList.add('appear');
-                    }, parseInt(delay));
-                } else {
-                    entry.target.classList.add('appear');
+    const animatedElements = document.querySelectorAll('.fade-in-up');
+
+    if (prefersReducedMotion) {
+        animatedElements.forEach(el => el.classList.add('appear'));
+    } else {
+        const observer = new IntersectionObserver((entries, animationObserver) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const delay = Number.parseInt(entry.target.getAttribute('data-delay') || '0', 10);
+                    window.setTimeout(() => entry.target.classList.add('appear'), delay);
+                    animationObserver.unobserve(entry.target);
                 }
-                observer.unobserve(entry.target); // Only animate once
+            });
+        }, observerOptions);
+
+        animatedElements.forEach(el => observer.observe(el));
+    }
+
+    // Keep the floating contact action discreet while visitors explore the portfolio.
+    const portfolio = document.getElementById('portafolio');
+    if (portfolio) {
+        const portfolioObserver = new IntersectionObserver(entries => {
+            document.body.classList.toggle('portfolio-active', entries[0].isIntersecting);
+        }, { threshold: 0.12 });
+        portfolioObserver.observe(portfolio);
+    }
+
+    // Load the three full case-study screenshots only when the dialog is opened.
+    const hydrateCollage = collage => {
+        collage.querySelectorAll('[data-collage-src]').forEach(image => {
+            if (image.src) return;
+
+            image.addEventListener('load', () => image.classList.add('is-loaded'), { once: true });
+            image.src = image.dataset.collageSrc;
+            if (image.complete) image.classList.add('is-loaded');
+        });
+    };
+
+    // Accessible native case-study dialogs.
+    const caseOpeners = document.querySelectorAll('[data-case-open]');
+    const caseDialogs = document.querySelectorAll('.case-dialog');
+
+    caseOpeners.forEach(opener => {
+        opener.addEventListener('click', () => {
+            const dialog = document.getElementById(opener.dataset.caseOpen);
+            if (dialog instanceof HTMLDialogElement) {
+                const collage = dialog.querySelector('[data-case-collage]');
+                if (collage) hydrateCollage(collage);
+                dialog.showModal();
+                document.body.classList.add('dialog-open');
             }
         });
-    }, observerOptions);
+    });
 
-    const animatedElements = document.querySelectorAll('.fade-in-up');
-    animatedElements.forEach(el => observer.observe(el));
+    caseDialogs.forEach(dialog => {
+        const closeDialog = () => {
+            dialog.close();
+            document.body.classList.remove('dialog-open');
+        };
+
+        dialog.querySelector('[data-case-close]')?.addEventListener('click', closeDialog);
+        dialog.addEventListener('close', () => document.body.classList.remove('dialog-open'));
+        dialog.addEventListener('click', event => {
+            if (event.target === dialog) closeDialog();
+        });
+    });
 });
