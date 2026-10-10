@@ -1649,6 +1649,39 @@ img {
     padding: 0.68rem 1rem;
 }
 
+.portfolio-card-wide {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+}
+
+.portfolio-card-wide .browser-frame {
+    min-height: 100%;
+}
+
+.portfolio-card-wide .project-shot {
+    height: 100%;
+    min-height: 360px;
+    aspect-ratio: auto;
+}
+
+.portfolio-card-wide .portfolio-info {
+    justify-content: center;
+    min-height: 0;
+    padding: clamp(2rem, 4vw, 3.5rem);
+}
+
+@media (max-width: 860px) {
+    .portfolio-card-wide {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-card-wide .project-shot {
+        min-height: 0;
+        aspect-ratio: 16 / 9;
+    }
+}
+
 .case-dialog {
     position: fixed;
     inset: 0;
